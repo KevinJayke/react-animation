@@ -1,7 +1,7 @@
-import { useSpring, animated, useSpringRef } from "@react-spring/web";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-const Square = styled(animated.div)`
+const Square = styled(motion.div)`
   width: 80px;
   height: 80px;
   background-color: #ff6d6d;
@@ -9,31 +9,16 @@ const Square = styled(animated.div)`
   cursor: pointer;
 `;
 
-const AnimatedSquare = () => {
-  const api = useSpringRef();
-  const springs = useSpring({
-    ref: api,
-    from: { x: 0 },
-  });
-
-  const handleClick = () => {
-    const isEndingPosition = springs.x.get() === 200;
-
-    api.start({
-      to: {
-        x: isEndingPosition ? 0 : 200,
-      },
-    });
-  };
-
+const AnimatedMotion = () => {
   return (
     <Square
-      onClick={handleClick}
-      style={{
-        ...springs,
+      whileTap={{
+        scale: [1, 2, 2, 1, 1],
+        rotate: [0, 0, 270, 270, 0],
+        borderRadius: ["20%", "20%", "50%", "50%", "20%"],
       }}
     />
   );
 };
 
-export default AnimatedSquare;
+export default AnimatedMotion;
