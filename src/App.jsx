@@ -1,9 +1,9 @@
-import AnimatedDiv from "./components/AnimatedDiv";
+import AnimatedSquare from "./components/AnimatedSquare";
 
 function App() {
   return (
     <div className="App">
-      <AnimatedDiv text={"salut"} />
+      <AnimatedSquare text={"salut"} />
     </div>
   );
 }

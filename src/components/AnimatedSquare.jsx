@@ -7,9 +7,10 @@ const Square = styled(animated.div)`
   height: 80px;
   background-color: #ff6d6d;
   border-radius: 8px;
+  cursor: pointer;
 `;
 
-const MyComponent = () => {
+const AnimatedSquare = () => {
   const [springs, api] = useSpring(() => ({
     from: { x: 0 },
   }));
@@ -53,4 +54,4 @@ const MyComponent = () => {
   );
 };
 
-export default MyComponent;
+export default AnimatedSquare;
