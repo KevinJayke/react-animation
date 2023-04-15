@@ -1,10 +1,18 @@
-import AnimatedSquare from "./components/AnimatedSquare";
+import styled from "styled-components";
+import AnimatedShape from "./components/AnimatedShape";
+
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <AnimatedSquare text={"salut"} />
-    </div>
+    <Wrapper>
+      <AnimatedShape text={"salut"} />
+    </Wrapper>
   );
 }
 
