@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 function App() {
   return (
     <Wrapper>
-      <AnimatedShape text={"salut"} />
+      <AnimatedShape />
     </Wrapper>
   );
 }
